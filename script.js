@@ -49,7 +49,7 @@ analyzeButton.addEventListener("click",async () => {
         firstPage.classList.toggle('active')
         secondPage.classList.toggle('active')
 
-        Renderresults(data,targetUrl);
+        Renderresults(data);
         console.log(data);
     }catch(err){
         console.error("PageSpeed API Error:",err)
@@ -100,8 +100,10 @@ function getCruxClass(category) {
     if (cat === 'SLOW' || cat === 'POOR') return 'score-poor';
     return '';
 }
-function Renderresults(data,cleanedUrl){
+function Renderresults(data){
     const {id} = data
+    const fullUrl = id;
+    console.log(fullUrl);
     //lab
     const lighthouse = data.lighthouseResult;
     //Crux
@@ -149,7 +151,7 @@ function Renderresults(data,cleanedUrl){
     
 
     mainResult.innerHTML = `<div class="pforMain">
-                            <p>Website Name: <strong>${targetUrl}</strong></p>
+                            <p>Website Name: <strong>${id}</strong></p>
                             <p>Performance: <strong>${perfScore}</strong></p>
                             <p>SEO: <strong>${seoScore}</strong></p>
                             <p>Accessibility: <strong>${a11yScore}</strong></p>
