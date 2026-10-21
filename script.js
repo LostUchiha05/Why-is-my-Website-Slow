@@ -23,7 +23,13 @@ analyzeButton.addEventListener("click",async () => {
     if(!/^https?:\/\//i.test(targetUrl)){
         targetUrl =`https:${targetUrl}`;
     }
-    
+    try {
+        const parsedUrl = new URL(targetUrl);
+        // Strips marketing query parameters (?utm_source, ?gclid, etc.)
+        targetUrl = parsedUrl.origin + parsedUrl.pathname; 
+    } catch (e) {
+        console.warn("URL parsing error:", e);
+    }
 
     firstPage.classList.add('has-analyzing');
     analyzeButton.disabled = true;
