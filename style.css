@@ -192,11 +192,7 @@ body{
     overflow-wrap: break-word;
     word-break: break-all;
 }
-.fa-info{
-    color: #5DD62C;
-    width: 100px;
-}
-.pforLab p, .pforSEO p, .pforCrux p {
+.pforLab p, .pforSEO p, .pforCrux p{
     overflow-wrap: break-word;
     word-break: break-word;
 }

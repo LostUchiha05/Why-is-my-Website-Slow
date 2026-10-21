@@ -13,7 +13,7 @@ const secondPage = document.getElementById('second-page')
 
 analyzeButton.addEventListener("click",async () => {
     let targetUrl = urlInput.value.trim();
-   
+   console.log(targetUrl)
 
     if(!targetUrl){
         alert("Please enter a valid URL.")
