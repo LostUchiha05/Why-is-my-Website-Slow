@@ -23,7 +23,7 @@ analyzeButton.addEventListener("click",async () => {
         targetUrl =`https:${targetUrl}`;
     }
     try {
-        const parsedUrl = new URL(targetUrl);
+        const parsedUrl = new URL(targetUrl);   
         // Strips marketing query parameters (?utm_source, ?gclid, etc.)
         targetUrl = parsedUrl.origin + parsedUrl.pathname; 
     } catch (e) {
@@ -49,7 +49,7 @@ analyzeButton.addEventListener("click",async () => {
         firstPage.classList.toggle('active')
         secondPage.classList.toggle('active')
 
-        Renderresults(data);
+        Renderresults(data,targetUrl);
         console.log(data);
     }catch(err){
         console.error("PageSpeed API Error:",err)
@@ -100,7 +100,7 @@ function getCruxClass(category) {
     if (cat === 'SLOW' || cat === 'POOR') return 'score-poor';
     return '';
 }
-function Renderresults(data){
+function Renderresults(data,cleanedUrl){
     const {id} = data
     //lab
     const lighthouse = data.lighthouseResult;
