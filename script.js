@@ -13,7 +13,6 @@ const secondPage = document.getElementById('second-page')
 
 analyzeButton.addEventListener("click",async () => {
     let targetUrl = urlInput.value.trim();
-   console.log(targetUrl)
 
     if(!targetUrl){
         alert("Please enter a valid URL.")
@@ -150,7 +149,7 @@ function Renderresults(data){
     
 
     mainResult.innerHTML = `<div class="pforMain">
-                            <p>Website Name: <strong>${id}</strong></p>
+                            <p>Website Name: <strong>${targetUrl}</strong></p>
                             <p>Performance: <strong>${perfScore}</strong></p>
                             <p>SEO: <strong>${seoScore}</strong></p>
                             <p>Accessibility: <strong>${a11yScore}</strong></p>
