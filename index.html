@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slow Why</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Isometra&family=Orbitron&family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="screen active" id="first-page">
+            <h1 class="Website-name">Why is My Website Slow?</h1>
+            <p class="Website-description"><small>Shows what all factors does your Website has and why is the frontend being slow.</small></p>
+            <input type="text" id="url-input">
+            <button  id="analyze-btn">Analyze</button>
+        </div>
+        <div class="screen " id="second-page">
+        <div id="results">
+            <div id="main-results" style="grid-area:box-1">
+                <h1>Main Results</h1>
+                <div class="main-results-description">
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <div id="mainResult-Tab"></div>
+
+            </div>
+            <div id="result-lab-section" style="grid-area:box-2">
+                <h1><strong>Lab/Lighthouse Performance Data</strong></h1>
+                <div id="result-lab"></div>
+            </div>
+            <div id="result-seo-section" style="grid-area:box-3">
+                <h1><strong>SEO Data</strong></h1>
+                <div id="result-seo"></div>
+            </div>
+            <div id="result-crux-section" style="grid-area:box-4">
+                <h1><strong>Crux Data</strong></h1>
+                <div id="result-crux"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
